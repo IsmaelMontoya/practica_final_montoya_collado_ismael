@@ -115,7 +115,15 @@ def visualizar_serie(serie):
     - Guarda con plt.savefig("output/ej4_serie_original.png", dpi=150, bbox_inches='tight')
     """
     # TODO: Implementa la visualización de la serie
-    pass
+    fig, ax = plt.subplots(figsize=(14, 4))
+    ax.plot(serie.index, serie.values, color='blue', linewidth=1)
+    ax.set_title("Serie Temporal completa", fontsize=14)
+    ax.set_xlabel("Fecha")
+    ax.set_ylabel("Valor")
+    ax.grid(True, linestyle='--', alpha=0.3)
+    plt.tight_layout()
+    plt.savefig("output/ej4_serie_original.png", dpi=150, bbox_inches='tight')
+    plt.show()
 
 
 # =============================================================================
