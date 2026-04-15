@@ -289,8 +289,8 @@ if __name__ == "__main__":
 
     # Fichero de coeficientes
     # Para windows
-    # with open("output/ej3_metricas.txt", "w", encoding="utf-8") as f:
-    with open("output/ej3_coeficientes.txt", "w") as f:
+    with open("output/ej3_metricas.txt", "w", encoding="utf-8") as f:
+    # with open("output/ej3_coeficientes.txt", "w") as f:
         f.write("Regresión Lineal Múltiple — Coeficientes ajustados\n")
         f.write("=" * 50 + "\n")
         nombres = ["Intercepto (β₀)"] + [f"β{i+1} (feature {i+1})" for i in range(n_features)]
@@ -302,8 +302,8 @@ if __name__ == "__main__":
 
     # Fichero de métricas
     # Para windows
-    # with open("output/ej3_metricas.txt", "w", encoding="utf-8") as f:
-    with open("output/ej3_metricas.txt", "w") as f:
+    with open("output/ej3_metricas.txt", "w", encoding="utf-8") as f:
+    # with open("output/ej3_metricas.txt", "w") as f:
         f.write("Regresión Lineal Múltiple — Métricas de evaluación\n")
         f.write("=" * 50 + "\n")
         f.write(f"  MAE  : {mae:.6f}\n")

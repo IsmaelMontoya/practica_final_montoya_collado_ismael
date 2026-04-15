@@ -173,7 +173,7 @@ def analizar_residuo(residuo):
     Analiza el componente de residuo para determinar si se parece
     a un ruido ideal (gaussiano, media ≈ 0, varianza constante, sin autocorr.).
 
-    Genera:
+    Genera: 
       - output/ej4_acf_pacf.png          → ACF y PACF del residuo
       - output/ej4_histograma_ruido.png  → Histograma + curva normal ajustada
       - output/ej4_analisis.txt          → Estadísticos numéricos

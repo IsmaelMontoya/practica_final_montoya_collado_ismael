@@ -1,4 +1,2 @@
-*.ipynb
-*.png
-*.txt
 /venv/**/*
+/documents_modify/**/*

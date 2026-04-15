@@ -1,0 +1,8 @@
+ANÁLISIS DEL RESIDUO
+========================================
+Media: 0.1271
+Std: 3.2220
+Asimetría: -0.0509
+Curtosis: -0.0610
+Jarque-Bera p-valor: 0.5766
+ADF p-valor: 0.0000

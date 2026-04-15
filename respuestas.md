@@ -12,11 +12,17 @@ Añade aqui tu descripción y analisis:
 
 **Pregunta 1.1** — ¿De qué fuente proviene el dataset y cuál es la variable objetivo (target)? ¿Por qué tiene sentido hacer regresión sobre ella?
 
-> _Escribe aquí tu respuesta_
+> El dataset utilizado proviende de datos de rendimiento académico de estudiantes, quyue simulan variables relacionadas con su comportamiento y entorno educativo.
+La variable objetivo es GPA, que es la nota del eestudiante. 
+Tiene sentido aplicar regresión sobre esta variable por que es continua y puede explicarse en funciónd e otras variables como el tiempo de estudio, ausencias o apoyo familiar.
 
 **Pregunta 1.2** — ¿Qué distribución tienen las principales variables numéricas y has encontrado outliers? Indica en qué variables y qué has decidido hacer con ellos.
 
-> _Escribe aquí tu respuesta_
+> Las variables numéricas presentan distribuciones variadas. 
+El tiempo de estudio semanal muestra una distribución aproximadamente normal, mientras que las ausencias presentan una mayor dispersión y posible asimetría. 
+En algunas variables se detectan outliers, especialmente en las ausencias, donde algunos estudiantes presentan valores muy elevados respecto al resto. 
+En este análisis no se han eliminado los outliers, ya que pueden representar casos reales de comportamiento extremo y no necesariamente errores en los datos.
+
 
 **Pregunta 1.3** — ¿Qué tres variables numéricas tienen mayor correlación (en valor absoluto) con la variable objetivo? Indica los coeficientes.
 
