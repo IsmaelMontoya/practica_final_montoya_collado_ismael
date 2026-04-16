@@ -69,11 +69,11 @@ Añade aqui tu descripción y analisis:
 > - R² (Coeficiente de determinación): 0.756
 
 > El valor de R² = 0.756 indica que el modelo es capaz de explicar aproximadamente el 75.6% de la variabilidad de la variable objetivo (MARGEN_DOLARES), lo cual sugiere un buen ajuste general al estar cerca de 1.
-
+ 
 > En cuanto a los errores, el MAE de 24.82 indica que, en promedio, el modelo se equivoca en unos 25 dólares por predicción. Sin embargo, el hecho de que el RMSE (47.83) sea considerablemente mayor que el MAE sugiere la presencia de errores grandes en algunas observaciones, lo cual es coherente con la existencia de outliers detectados previamente en el análisis descriptivo.
 
 > El gráfico de residuos muestra que estos no se distribuyen completamente de forma aleatoria, observándose ciertos patrones y una dispersión no constante, lo que indica posibles problemas de heterocedasticidad y que la relación entre variables no es perfectamente lineal.
-![alt text](image.png)
+![alt text](output/ej2_residuos.png)
 
 > En conjunto, el modelo funciona razonablemente bien como primera aproximación, pero presenta limitaciones que vienen de la naturaleza de los datos, especialmente la presencia de outliers y relaciones no lineales, por lo que podría mejorarse mediante modelos más complejos o técnicas adicionales de preprocesamiento.
 Además, se observa que la variable MARGEN_PORCENTAJE es la más influyente en el modelo, lo cual es consistente con el análisis de correlaciones realizado previamente.
@@ -90,10 +90,10 @@ Añade aqui tu descripción y analisis:
 
 **Pregunta 3.1** — Explica en tus propias palabras qué hace la fórmula β = (XᵀX)⁻¹ Xᵀy y por qué es necesario añadir una columna de unos a la matriz X.
 
-> Esta formula nos sirve para saber los coeficientes que no esten en la primera columna  que se utilizan para minimizar el error cuadrático del RMSE entre los valores (y) y los valores que predice el modelo.
+> Esta formula nos sirve para saber los coeficientes que no esten en la primera columna  que se utilizan para minimizar el error cuadrático del MSE entre los valores (y) y los valores que predice el modelo.
 Por dentro lo que hace es comparar como hemos dicho los valores que teniamos y los predichos.
 
-> La columna añadida es para poder estimar un primer valor que no cambia (β sub 0) que también se llama intercepto. Sin esta columna el modelo siemp0re tendria que pasar por el origen (QUE ES EL OORIGEN?) , lo que limitaria su cpacidad de ajustar.
+> La columna añadida es para poder estimar un primer valor que no cambia (β sub 0) que también se llama intercepto. Sin esta columna el modelo siemp0re tendria que pasar por el origen (putno 0,0 del plano) , lo que limitaria su cpacidad de ajustar.
 
 **Pregunta 3.2** — Copia aquí los cuatro coeficientes ajustados por tu función y compáralos con los valores de referencia del enunciado.
 
@@ -136,20 +136,44 @@ Añade aqui tu descripción y analisis:
 
 **Pregunta 4.1** — ¿La serie presenta tendencia? Descríbela brevemente (tipo, dirección, magnitud aproximada).
 
-> _Escribe aquí tu respuesta_
+> La serie presenta una clara tendencia creciente a lo largo del tiempo.
+Se trata de una tendencia de tipo lineal con suavidad, donde los valores aumentan progresivamente desde aproximadamente 60 hasta valores cercanos a 160–170 al final del periodo.
+Esto indica un crecimiento sostenido en el tiempo, posiblemente asociado a un incremento estructural en la variable analizada.
+![alt text](images/tendencia.png)
 
 **Pregunta 4.2** — ¿Hay estacionalidad? Indica el periodo aproximado en días y la amplitud del patrón estacional.
 
-> _Escribe aquí tu respuesta_
+> Sí, la serie presenta un patrón estacional claramente visible.
+El periodo aproximado de la estacionalidad es de 365 días (anual), ya que se repiten patrones similares cada año.
+La amplitud del componente estacional es aproximadamente de ±15–20 unidades, observándose oscilaciones regulares alrededor de la tendencia.
+![alt text](output/ej4_serie_original.png)
 
 **Pregunta 4.3** — ¿Se aprecian ciclos de largo plazo en la serie? ¿Cómo los diferencias de la tendencia?
 
-> _Escribe aquí tu respuesta_
+> No se aprecian ciclos de largo plazo diferenciados más allá de la tendencia general creciente.
+La diferencia entre ciclos y tendencia es que:
+
+> - La tendencia representa un cambio estructural sostenido en el tiempo (en este caso, crecimiento).
+> - Los ciclos implican fluctuaciones de largo plazo no periódicas alrededor de la tendencia.
+
+> En este caso, las variaciones observadas se explican principalmente por la combinación de tendencia y estacionalidad, sin evidencia clara de ciclos adicionales.
 
 **Pregunta 4.4** — ¿El residuo se ajusta a un ruido ideal? Indica la media, la desviación típica y el resultado del test de normalidad (p-value) para justificar tu respuesta.
 
-> _Escribe aquí tu respuesta_
+> Datos:
+> - Media ≈ 0.127
+> - Std ≈ 3.22
+> - p-value = 0.5766
 
+> El residuo se aproxima bastante a un ruido blanco ideal.
+La media del residuo es cercana a cero (≈ 0.127), lo que indica que no existe sesgo sistemático en el modelo.
+La desviación típica es moderada (≈ 3.22), reflejando la variabilidad del error.
+Además, el test de normalidad de Jarque-Bera arroja un p-valor de 0.5766 , lo que implica que no se rechaza la hipótesis de normalidad.
+
+> Por otro lado, los gráficos ACF y PACF muestran que no existe autocorrelación significativa en los residuos, ya que la mayoría de los valores se encuentran dentro de los intervalos de confianza.
+En conjunto, estos resultados indican que el residuo se comporta de forma cercana a un ruido blanco, cumpliendo los supuestos del modelo.
+
+![alt text](output/ej4_acf_pacf.png)
 ---
 
 *Fin del documento de respuestas*
