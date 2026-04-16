@@ -63,7 +63,20 @@ Añade aqui tu descripción y analisis:
 
 **Pregunta 2.1** — Indica los valores de MAE, RMSE y R² de la regresión lineal sobre el test set. ¿El modelo funciona bien? ¿Por qué?
 
-> _Escribe aquí tu respuesta_
+> El modelo de regresion lineal ha obtenido los siguientes resultados:
+> - MAE (Error absoluto medio): 24.82
+> - RMSE (Raíz del error cuadrático medio): 47.83
+> - R² (Coeficiente de determinación): 0.756
+
+> El valor de R² = 0.756 indica que el modelo es capaz de explicar aproximadamente el 75.6% de la variabilidad de la variable objetivo (MARGEN_DOLARES), lo cual sugiere un buen ajuste general al estar cerca de 1.
+
+> En cuanto a los errores, el MAE de 24.82 indica que, en promedio, el modelo se equivoca en unos 25 dólares por predicción. Sin embargo, el hecho de que el RMSE (47.83) sea considerablemente mayor que el MAE sugiere la presencia de errores grandes en algunas observaciones, lo cual es coherente con la existencia de outliers detectados previamente en el análisis descriptivo.
+
+> El gráfico de residuos muestra que estos no se distribuyen completamente de forma aleatoria, observándose ciertos patrones y una dispersión no constante, lo que indica posibles problemas de heterocedasticidad y que la relación entre variables no es perfectamente lineal.
+![alt text](image.png)
+
+> En conjunto, el modelo funciona razonablemente bien como primera aproximación, pero presenta limitaciones que vienen de la naturaleza de los datos, especialmente la presencia de outliers y relaciones no lineales, por lo que podría mejorarse mediante modelos más complejos o técnicas adicionales de preprocesamiento.
+Además, se observa que la variable MARGEN_PORCENTAJE es la más influyente en el modelo, lo cual es consistente con el análisis de correlaciones realizado previamente.
 
 
 ---
